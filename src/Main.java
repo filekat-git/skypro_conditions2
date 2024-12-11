@@ -3,30 +3,52 @@ public class Main {
 
         // task 1
         byte clientOS = 0;
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-            default:
-                System.out.println("Не удалось определить ОС");
+        /**
+         * switch (clientOS) {
+         *             case 0:
+         *                 System.out.println("Установите версию приложения для iOS по ссылке");
+         *                 break;
+         *             case 1:
+         *                 System.out.println("Установите версию приложения для Android по ссылке");
+         *                 break;
+         *             default:
+         *                 System.out.println("Не удалось определить ОС");
+         *         }
+         */
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Не удалось определить ОС");
         }
 
         // task 2
         short clientDeviceYear = 2015;
-        switch (clientOS) {
-            case 0:
-                String a = clientDeviceYear < 2015 ? "Установите облегченную версию приложения для iOS по ссылке" : "Установите версию приложения для iOS по ссылке";
-                System.out.println(a);
-                break;
-            case 1:
-                String b = clientDeviceYear < 2015 ? "Установите облегченную версию приложения для iOS по ссылке" : "Установите версию приложения для iOS по ссылке";
-                System.out.println(b);
-                break;
-            default:
-                System.out.println("Не удалось определить ОС");
+        /**
+         *      switch (clientOS) {
+         *             case 0:
+         *                 String a = clientDeviceYear < 2015 ? "Установите облегченную версию приложения для iOS по ссылке" : "Установите версию приложения для iOS по ссылке";
+         *                 System.out.println(a);
+         *                 break;
+         *             case 1:
+         *                 String b = clientDeviceYear < 2015 ? "Установите облегченную версию приложения для Android по ссылке" : "Установите версию приложения для Android по ссылке";
+         *                 System.out.println(b);
+         *                 break;
+         *             default:
+         *                 System.out.println("Не удалось определить ОС");
+         *         }
+         */
+        if (clientDeviceYear >= 2015 && clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear >= 2015 && clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (clientDeviceYear < 2015 && clientOS == 0) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientDeviceYear < 2015 && clientOS == 1) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Не удалось определить ОС");
         }
 
         // task 3
@@ -63,8 +85,8 @@ public class Main {
          */
 
         // task 5
-        int month = 1;
-        switch (month) {
+        int monthNumber = 1;
+        switch (monthNumber) {
             case 12:
             case 1:
             case 2:
